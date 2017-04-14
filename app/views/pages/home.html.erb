@@ -1,10 +1,12 @@
 <h1>MessageMeNow</h1>
 <p>Welcome to MessageMeNow</br>Please enter a message and a phone number</p>
 
-<%= form_tag("/sms/send", method: "post") do %>
-<%= label_tag(:q, "Your Message:") %>
-  <%= text_field_tag(:q) %>
-<%= label_tag(:q, "Phone Number (xxx) xxx-xxxx:") %> 
- <%= text_field_tag(:q) %>
-  <%= submit_tag("Send Away") %>
+<div>
+    <%= form_tag("/sms/send", method: "post") do %>
+  <%= label_tag(:text, "Message:") %>
+  <%= text_field_tag(:text) %>
+  <%= label_tag(:number, "Number:") %>
+  <%= text_field_tag(:number) %> 
+  <%= submit_tag("Send!") %>
 <% end %>
+</div>
